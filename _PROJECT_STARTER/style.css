@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /*Applies to everything. General styling*/
-
+* {
+    box-sizing: border-box;
+}
 
 
 /*Applies to everything in the body tag*/
 body {
     font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column; /*set items vertically*/
+    align-items: center; /*Align items in the center (horizontally)*/
+    justify-content: center; /*Align items in the center (vertically)*/
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
 }
