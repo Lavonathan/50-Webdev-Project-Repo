@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column; /*set items vertically*/
+    align-items: center; /*Align items in the center (horizontally)*/
+    justify-content: center; /*Align items in the center (vertically)*/
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
+}
+
+/*The container for all the cards*/
+.container {
+    display: flex;  
+    width: 90vw;   /*The view wiedth. the container will take up 90% of width.*/
+    border-style: groove;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; /*set the height of the panels. They are 80% of the view.*/
+    border-radius: 50px 0px; /*For the rounded edges*/
+    color: #fff; /*Set color of text*/
+    cursor: pointer; /*turns the cursor into a pointer when hover over it*/
+    flex: 0.8;
+    margin: 4px; /*spread them out from one another*/
+    position: relative; /*the position of each panel is relative to container parent*/
+    transition: flex 0.7s ease-in; /*transitions when changing size*/
+}
+
+.panel h3 {
+    font-size: 30px;
+    position: absolute; /*The h3 position never changes, even when panel size does*/
+    bottom: 20px; /*Move the absolute position 20 px from the bottom*/
+    left: 20px; /*move the absolute position 20 pixels from the left*/
+    opacity: 0; /*Make the text invisible. Will be made visible for active panels.*/
+}
+
+/* Done on panel divs that are of the active class */
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 0.9;
+}
+
+/* When the screen is smaller than specified size do the following */
+@media (max-width: 500px) {
+    
+    /*  The container takes up full width on small screens. */
+    .container {
+        width: 100vw;
+    }
+
+    /*  The fourth and fight panels dissapear when the screen is too small */
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
