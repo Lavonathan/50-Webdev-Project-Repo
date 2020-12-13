@@ -1,9 +1,9 @@
 <!------------
 index.html
-PURPOSE:
+PURPOSE: Progress Steps tutorial
 AUTHOR: Lavon Marquise Edwards
-DATE:
-NOTES: 
+DATE: December 13, 2020
+NOTES:
 ------------->
 
 <!DOCTYPE html>
@@ -19,11 +19,23 @@ NOTES:
     <!---Fontawesome stylesheet-->
 
     <link rel="stylesheet" href="style.css">
-    <title>My Project</title>
+    <title>Progress Steps</title>
 </head>
 <body>
-    <h1>Project Starter</h1>
-    <h2>Begin project</h2>
+    <div class="container">
+       
+        <div class="progress-container">
+            <div class="progress-line" id="progress-line"></div>
+            <div class="circle active">1</div>
+            <div class="circle active">2</div>
+            <div class="circle active">3</div>
+            <div class="circle active">4</div>
+        </div>  
+
+        <button class="btn" id="prev" disabled>Prev</button>
+        <button class="btn" id="prev">Next</button>
+
+    </div>
 
     <script src="Javascript.js"></script>
 </body>
