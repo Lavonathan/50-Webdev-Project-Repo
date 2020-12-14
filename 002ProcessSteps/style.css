@@ -72,7 +72,6 @@ body {
                                 This makes it directly in the middle*/
     z-index: -1;/*So that the line appears behind the circles.*/
     transition: .4s ease;
-    transition-delay: 0.4s; 
 }
 
 /*Circles that haven't been progressed to yet.*/
@@ -92,6 +91,7 @@ body {
 /*Circles that have been progressed to*/
 .circle.active {
     border-color: var(--line-border-fill);
+    transition: 1s ease;
 }
 
 .btn {
