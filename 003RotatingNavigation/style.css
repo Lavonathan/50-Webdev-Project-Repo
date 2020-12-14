@@ -1,0 +1,155 @@
+/*
+style.css
+PURPOSE: Rotating Navigation project
+AUTHOR: Lavon Marquise Edwards
+DATE: December 14 2020
+NOTES: 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    overflow-x: hidden; /*Scroll bar on the X axis hidden by default*/
+    background-color: #333;
+    color: #222;
+}
+
+/* The container of content */
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    width: 100vw;
+    min-height: 100vh;
+    transition: transform 0.5s linear;
+    padding: 50px;
+    padding-top: 80px;
+}
+
+
+ /* For content container when the navigation is selected */
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+/* The circle container at the top */
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px; 
+}
+
+/* The actual circle */
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+/* rotate the circle when showing the navigation, so 
+the close button can be seen */
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* The second li will be further to the right  */
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+/* The third li will be even further to the right */
+nav ul li + li +li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.4;
+}
+
+.content img {
+    max-width: 100%;
+} 
