@@ -1,0 +1,68 @@
+/****************************
+style.css
+PURPOSE: Hidden Search Widget CSS
+AUTHOR: Lavon Marquise Edwards
+DATE: December 15 2020
+NOTES: 
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    background-image: linear-gradient(90deg,#7d5fff,#7158e2);
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    align-items: center; /*Align items in the center (horizontally)*/
+    justify-content: center; /*Align items in the center (vertically)*/
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+/* when nested they need to be seperated */
+.search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.btn {
+    background-color: #fff;
+    border: 0;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+/* when it is the same element with two classes, they are joined as shown here */
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}
