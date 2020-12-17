@@ -1,0 +1,60 @@
+/****************************
+style.css
+PURPOSE: Style sheet for project 6. Scroll animation
+AUTHOR: Lavon Marquise Edwards
+DATE: December 17 2020
+NOTES: 
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    background-color: #f38429;
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column; /*set items vertically*/
+    align-items: center; /*Align items in the center (horizontally)*/
+    justify-content: center; /*Align items in the center (vertically)*/
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: rgb(168, 25, 56);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform .4s ease;
+}
+
+/* This allows you to select all the even boxes */
+.box:nth-of-type(even) {
+    transform: translateX(-400%);   
+}
+
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size: 48px;
+}
