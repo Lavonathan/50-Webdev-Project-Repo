@@ -9,11 +9,11 @@ NOTES: Also added in volume! Nice Work!
 //  array of all of the sounds
 const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
 
-//  The current volume.
-var range_value = 0;
-
 //  get the range input for volume
 const range_input = document.getElementById('range');
+
+//  The current volume.
+var range_value = range_input.value;
 
 //  Dealing with the creationg and playing of each sound button.
 sounds.forEach(sound => {
