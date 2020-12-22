@@ -1,0 +1,67 @@
+/****************************
+style.css
+PURPOSE: Style sheet for the Event KEycode project
+AUTHOR: Lavon Marquise Edwards
+DATE: December 22 2020
+NOTES: 
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #e1e1e1;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column;
+    align-items: center; /*Align items in the center (cross axis)*/
+    justify-content: center; /*Align items in the center (Main axis)*/
+    text-align: center;
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
+}
+
+#insert {
+    transition: 1s ease;
+}
+
+/* All of this styling only appears once a key has been pressed  */
+/* #insert {
+    background-color: rgb(207, 204, 199);
+    height: 100px;
+    width: 600px;
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+} */
+
+.key {
+    border: 1px solid #999;
+    background-color: #eee;
+    box-shadow: 10px 10px 5px rgba(0,0,0,.4);
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+    font-weight: bold;
+    min-width: 150px;
+    position: relative;
+}
+
+.key small {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+}

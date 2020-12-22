@@ -20,8 +20,8 @@ body {
     margin: 0;
     display: flex; /*Use flex properties*/
     flex-direction: column; /*set items vertically*/
-    align-items: center; /*Align items in the center (horizontally)*/
-    justify-content: center; /*Align items in the center (vertically)*/
+    align-items: center; /*Align items in the center (Cross Axis)*/
+    justify-content: center; /*Align items in the center (Main Axis)*/
     height: 100vh; /*vh is veiwport height. 100 percent of view.*/
     overflow: hidden; /*Scroll bars hidden by default*/
 }
