@@ -1,0 +1,126 @@
+/****************************
+style.css
+PURPOSE: Style sheet for the random choice selecter project
+AUTHOR: Lavon Marquise Edwards
+DATE: December 24 2020 (Christmas Eve!!!)
+NOTES: 
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    background: linear-gradient(#2b88f0 80%,rgb(253, 255, 113));
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column; /*set items vertically*/
+    align-items: center; /*Align items in the center (Cross Axis)*/
+    justify-content: center; /*Align items in the center (Main Axis)*/
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
+    position: relative;
+}
+
+#title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    display: block;
+    position: relative;
+    padding: 0;
+}
+
+h3 {
+    color: #fff;
+    margin: 10px 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+span.underline {
+    position: relative;
+    color: black;
+    top: 15px;
+    text-decoration: underline;
+}
+
+.container {
+    width: 500px;
+}
+
+#smiley {
+    position: absolute;
+    transform: scale(.5) translateX(760px);
+    transition: 1s ease;
+}
+
+#smiley.focus {
+    transform: scale(.8) translateX(500px) translateY(50px) rotate(10deg);
+}
+
+textArea {
+    border: none;
+    background-color: rgba(239, 253, 253, 0.9);
+    display: block;
+    width: 100%;
+    height: 70px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px 0 20px;
+    font-size: 15px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 5px 5px 20px black ;
+    transition: ease 2s;
+}
+
+textarea:focus {
+    outline: none;
+    text-align: center;
+    height: 100px;
+    background-color: rgba(170, 255, 244, 0.9);
+    border-radius: 30px 15px;
+    color: black;
+    padding-top: 20px;
+}
+
+#tags {
+    padding-right: 50px;
+}
+
+.tag {
+    background-color: rgb(243, 247, 10);
+    color: Black;
+    border-radius: 50px 10px;
+    padding: 10px 20px;
+    margin: 0px 10px 10px 0;
+    display: inline-block;
+    border: inset rgba(0,0,0,.2) 1px;
+    font-weight: bold;
+    word-wrap: break-word;
+    max-width: 450px;
+}
+
+.tag.highlight{
+    background: linear-gradient( rgb(243, 247, 10) 50%, #ff0d0d);
+    transform: scale(1.05);
+    border-radius: 50px 15px;
+    border: solid 2px black;
+}
+
+.tag.selected{
+    background: linear-gradient(  #ff0d0d 70%, rgb(243, 247, 10));
+    transform: scale(1.5);
+    border-radius: 50px 30px;
+    border: solid 2px black;
+    margin: 0 30px;
+}
+
+

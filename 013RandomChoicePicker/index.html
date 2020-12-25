@@ -1,0 +1,53 @@
+<!------------
+index.html
+PURPOSE: Index page for the random choice selector project
+AUTHOR: Lavon Marquise Edwards
+DATE: December 24 2020 (Christmas Eve!!!)
+NOTES: 
+------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!---Fontawesome stylesheet-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" /> -->
+    <!---Fontawesome stylesheet-->
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Choice Selector</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">CHOICE MASTER 9000</h1>
+      <h3>
+        Enter all of the choices seperated by a comma
+        <br />
+        <span class="underline">Press Enter when you are done!</span>
+      </h3>
+      <img
+        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/thinking-face_1f914.png"
+        alt="Smiley"
+        id="smiley"
+      />
+
+      <textarea
+        id="textArea"
+        placeholder="Enter Choices here. 
+
+        For example: Choice1,Choice2,Choice3 . . ."
+      ></textarea>
+      <div id="tags">
+        <!-- <span class="tag">Choice 1</span>
+        <span class="tag">Choice 2</span>
+        <span class="tag">Choice 3</span> -->
+      </div>
+    </div>
+
+    <script src="Javascript.js"></script>
+  </body>
+</html>
