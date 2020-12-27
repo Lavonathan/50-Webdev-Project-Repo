@@ -1,0 +1,72 @@
+/****************************
+style.css
+PURPOSE: Style sheet for the incrementing counter project.
+AUTHOR: Lavon Marquise Edwards
+DATE: December 27 2020
+NOTES: 
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    background: linear-gradient(to top, #6509dd 20%, rgb(167, 70, 247) 80%);
+    color: white;
+    font-family: 'roboto Mono', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    align-items: center; /*Align items in the center (Cross Axis)*/
+    justify-content: center; /*Align items in the center (Main Axis)*/
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(181, 69, 233, 0.2);
+    padding-bottom: 40px;
+    border: 1px solid  rgba(15, 15, 15, 0.2);
+    border-bottom: 5px solid rgba(15, 15, 15, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 -5px 5px black;
+    transition: transform 5s ease;
+}
+
+.main-container:hover {
+    transform: scale(1.1);
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+    text-decoration: underline rgb(167, 70, 247) 3px;
+}
+
+@media(max-width: 700px) {
+    body {
+        flex-direction: column;
+        overflow: visible;
+        transform: scale(.9);
+    }
+
+    .main-container{
+        flex-direction: column;
+        width: 90vw;
+    }
+}
