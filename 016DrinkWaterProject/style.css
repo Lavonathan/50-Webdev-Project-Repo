@@ -1,0 +1,141 @@
+/****************************
+style.css
+PURPOSE: Style sheet for the drink water project
+AUTHOR: Lavon Marquise Edwards
+DATE: December 28 2020
+NOTES:
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,600&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --border-color: #144fc6;
+    --fill-color: #1990ff;
+}
+
+/*Applies to everything in the body tag*/
+body {
+    background: linear-gradient(to top, #88bfec 50%, #37a5ff 80%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column; /*set items vertically*/
+    align-items: center; /*Align items in the center (Cross Axis)*/
+    justify-content: top; /*Align items in the center (Main Axis)*/
+}
+
+h1 {
+    margin: 30px 0 0;
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.cup {
+    background: linear-gradient(to top, rgb(243, 243, 243) 10%, rgb(180, 215, 255) 80%); 
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 3px 3px 40px 40px;
+    height: 330px;
+    width: 150px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cups-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 280px;
+}
+
+.cup.cup-small {
+    width: 50px;
+    height: 95px;
+    border-radius: 4px 4px 15px 15px;
+    background: linear-gradient(to top, rgb(243, 243, 243) 10%, rgb(180, 215, 255) 80%); 
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    transition: 0.3s ease, gradient 5s ease;
+}
+
+.cup.cup-small::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 96px;
+    border-radius: 4px 4px 15px 15px;
+    transition: 0.5s ease;
+}
+
+.cup.cup-small:hover::before {
+    content: '';
+    background-color: rgba(48, 12, 250, 0.1);
+}
+
+.cup.cup-small.full {
+    background: none;
+    background-color: var(--fill-color);
+    color: #fff;
+}
+
+.cup.cup-small.full:hover::before {
+    content: '';
+    background-color: rgba(250, 12, 12, .3);
+}
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    transition: 0.3s ease;
+}
+
+.remained span {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.remained small {
+    font-size: 12px;
+}
+
+.percentage {
+    background-color: var(--fill-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    height: 0;
+    transition: 1s ease;
+}
+
+.text {
+    text-align: center;
+    margin: 0 0 5px;
+    color: var(--border-color);
+    font-size: 20px;
+    font-weight: bold;
+}
