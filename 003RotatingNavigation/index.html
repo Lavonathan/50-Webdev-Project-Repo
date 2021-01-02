@@ -9,88 +9,85 @@ NOTES: There is still some functionality here that I would like to add
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!---Fontawesome stylesheet-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <!---Fontawesome stylesheet-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Rotating Navigation</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="circle-container">
-            <div class="circle">
+      <div class="circle-container">
+        <div class="circle">
+          <!--Button with an close icon from the fontawesome library.-->
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
 
-                <!--Button with an close icon from the fontawesome library.-->
-                <button id="close">
-                    <i class="fas fa-times"></i>
-                </button>
-
-                <!--Button with an open icon from the fontawesome library.-->
-                <button id="open">
-                    <i class="fas fa-bars"></i>
-                </button>
-
-            </div>
+          <!--Button with an open icon from the fontawesome library.-->
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
 
-        <div class="content">
-            <h1>Amazing Article</h1>
-            <small>Lavon Edwards</small>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Numquam, eveniet ut ad id, illum aperiam quaerat consectetur quia tempora blanditiis repellat quam.
-                Porro, temporibus
-                veritatis magnam tempora in eos sapiente recusandae nisi totam deleniti consequatur distinctio eaque
-                tempore
-                optio obcaecati molestias possimus ratione necessitatibus ipsam nesciunt dolorum cum atque non? Commodi,
-                ab? Nobis quasi
-                id eum consequatur voluptatibus consequuntur vitae quis minus? Maxime neque veritatis enim, veniam odit
-                quo
-                eveniet. Dignissimos autem facere dicta enim non nemo incidunt nesciunt quos quo.
-                Eos eius magnam, deleniti magni blanditiis amet impedit fuga repellat, mollitia illum,
-                tenetur quas totam omnis ratione ipsam nostrum.
-            </p>
+      <div class="content">
+        <h1>Amazing Article</h1>
+        <small>Lavon Edwards</small>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
+          eveniet ut ad id, illum aperiam quaerat consectetur quia tempora
+          blanditiis repellat quam. Porro, temporibus veritatis magnam tempora
+          in eos sapiente recusandae nisi totam deleniti consequatur distinctio
+          eaque tempore optio obcaecati molestias possimus ratione
+          necessitatibus ipsam nesciunt dolorum cum atque non? Commodi, ab?
+          Nobis quasi id eum consequatur voluptatibus consequuntur vitae quis
+          minus? Maxime neque veritatis enim, veniam odit quo eveniet.
+          Dignissimos autem facere dicta enim non nemo incidunt nesciunt quos
+          quo. Eos eius magnam, deleniti magni blanditiis amet impedit fuga
+          repellat, mollitia illum, tenetur quas totam omnis ratione ipsam
+          nostrum.
+        </p>
 
-            <h3>Earth</h3>
-            <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="Earth" />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, velit! Doloribus maxime debitis
-                fugiat ut, impedit
-                temporibus consequatur commodi, fugit vero nesciunt repellat ducimus. Quas sit temporibus, porro
-                deserunt omnis
-                perferendis quia velit? Enim facilis necessitatibus sunt fugiat dignissimos neque dicta quae modi
-                nesciunt aut nam,
-                facere eveniet possimus autem asperiores consequatur delectus eligendi! Non vero, ipsum assumenda, modi
-                corporis dolore
-                distinctio delectus quas consequuntur, maxime eligendi voluptatem. Quia laudantium ad sit magnam
-                sapiente accusantium?
-            </p>
-
-        </div>
-            
+        <h3>Earth</h3>
+        <img
+          src="https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+          alt="Earth"
+        />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat,
+          velit! Doloribus maxime debitis fugiat ut, impedit temporibus
+          consequatur commodi, fugit vero nesciunt repellat ducimus. Quas sit
+          temporibus, porro deserunt omnis perferendis quia velit? Enim facilis
+          necessitatibus sunt fugiat dignissimos neque dicta quae modi nesciunt
+          aut nam, facere eveniet possimus autem asperiores consequatur delectus
+          eligendi! Non vero, ipsum assumenda, modi corporis dolore distinctio
+          delectus quas consequuntur, maxime eligendi voluptatem. Quia
+          laudantium ad sit magnam sapiente accusantium?
+        </p>
+      </div>
     </div>
-    
 
     <!--HTML navigation tag.-->
     <nav>
-        <ul>
-            <li><i class="fas fa-home"></i> Home</li>
-            <li><i class="fas fa-user-alt"></i> About</li>
-            <li><i class="fas fa-envelope"></i> Contact</li>
-        </ul>
+      <ul>
+        <li><i class="fas fa-home"></i> Home</li>
+        <li><i class="fas fa-user-alt"></i> About</li>
+        <li><i class="fas fa-envelope"></i> Contact</li>
+      </ul>
     </nav>
 
     <script src="Javascript.js"></script>
-</body>
-
+  </body>
 </html>

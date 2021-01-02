@@ -18,7 +18,8 @@ NOTES:
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    overflow-x: hidden; /*Scroll bar on the X axis hidden by default*/
+    overflow-x: hidden; /*Scroll bar on the X axis hidden by 
+    default*/
     background-color: #333;
     color: #222;
 }
