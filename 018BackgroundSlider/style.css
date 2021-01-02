@@ -1,0 +1,108 @@
+/****************************
+style.css
+PURPOSE: Style sheet for project 18 background slider
+AUTHOR: Lavon Marquise Edwards
+DATE: January 1st 2020
+NOTES: 
+****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*Applies to everything. General styling*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Applies to everything in the body tag*/
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    display: flex; /*Use flex properties*/
+    flex-direction: column; /*set items vertically*/
+    align-items: center; /*Align items in the center (Cross Axis)*/
+    justify-content: center; /*Align items in the center (Main Axis)*/
+    height: 100vh; /*vh is veiwport height. 100 percent of view.*/
+    overflow: hidden; /*Scroll bars hidden by default*/
+    background-position: center center;  /* Move the background images pos to center*/
+    background-size: cover; /*Cover everything*/
+    transition: 0.4s ease;
+
+    /*The below will be manually put in through the js now.*/
+    /* background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80'); */
+}
+
+/* Darken the background with an overlay  */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+h1#header {
+    color: white;
+    text-decoration: underline;
+    font-family: inherit;
+}
+
+.slider-container {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 3px 6px rgba(0, 0, 0, 0.5);
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.arrow {
+    position: fixed;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+    border: 2px solid orange;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:active {
+    transform: translateY(calc(-50% - 2px)) scale(.98);
+    color: rgb(75, 75, 75);
+}
+
+.left-arrow {
+    left: calc(15vw - 65px);
+    border-radius: 40px 0 0 40px;
+}
+
+.right-arrow {
+    right: calc(15vw - 65px);
+    border-radius: 0 40px 40px 0;
+}

@@ -4,10 +4,13 @@ PURPOSE: Javascript for the Movie App project
 AUTHOR: Lavon Marquise Edwards
 DATE: December 31 2020
 NOTES: Some ideas to improve this would be to do pagination.
+make it so you can return to the main page.
 -Category search?
 -Include logo
 -Add more to the header.
-Improve the styling further
+-Improve the styling further
+-a Home button
+-Display "none" when no search results found.
 -And more! cand definitely expand on this project a ton.
 ****************************/
 
@@ -95,6 +98,7 @@ form.addEventListener('submit', (e) => {
 
         search.value = '';
     } else {
+        getMovies(API_URL);
         window.location.reload();
     }
 })
